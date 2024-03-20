@@ -1,0 +1,18 @@
+// favonacci series
+function generateFibonacciSeries(num: number): number[] {
+  const fibonacciSeries: number[] = [];
+
+  if (num >= 1) {
+    fibonacciSeries.push(0);
+  }
+  if (num >= 2) {
+    fibonacciSeries.push(1);
+  }
+
+  for (let i = 2; i < num; i++) {
+    const nextElement = fibonacciSeries[i - 1] + fibonacciSeries[i - 2];
+    fibonacciSeries.push(nextElement);
+  }
+
+  return fibonacciSeries;
+}
