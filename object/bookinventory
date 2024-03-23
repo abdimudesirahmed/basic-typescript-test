@@ -1,0 +1,32 @@
+interface Book {
+  title: string;
+  author: string;
+  pages: number;
+  available: boolean;
+}
+
+const bookInventory: Book[] = [
+  {
+    title: "Book 1",
+    author: "Author 1",
+    pages: 200,
+    available: true,
+  },
+  {
+    title: "Book 2",
+    author: "Author 2",
+    pages: 300,
+    available: false,
+  },
+  {
+    title: "Book 3",
+    author: "Author 3",
+    pages: 250,
+    available: true,
+  },
+];
+
+console.log(bookInventory[0].title);     
+console.log(bookInventory[1].author);   
+console.log(bookInventory[2].pages);     
+console.log(bookInventory[0].available); 
