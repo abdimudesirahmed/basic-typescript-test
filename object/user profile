@@ -1,0 +1,16 @@
+// here is the object
+interface UserProfile {
+  name: string;
+  age: number;
+  email: string;
+}
+
+const userProfile: UserProfile = {
+  name: "abdi mudesir",
+  age: 22,
+  email: "abdimudesir43@gmail.com",
+};
+
+console.log(userProfile.name);  
+console.log(userProfile.age);  
+console.log(userProfile.email); 
