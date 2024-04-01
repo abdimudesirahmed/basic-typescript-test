@@ -1,0 +1,26 @@
+// the html file 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamically Create Elements</title>
+</head>
+<body>
+  <div id="dynamicContent"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+// here is the ts file
+const dynamicContentDiv = document.getElementById("dynamicContent");
+
+if (dynamicContentDiv) {
+  for (let i = 1; i <= 5; i++) {
+    const paragraph = document.createElement("p");
+    paragraph.innerText = `This is paragraph ${i}`;
+    dynamicContentDiv.appendChild(paragraph);
+  }
+} else {
+  console.error("Unable to find the 'dynamicContent' div.");
+}
