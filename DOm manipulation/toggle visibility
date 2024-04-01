@@ -1,0 +1,31 @@
+// here is the html code
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toggle Content</title>
+  <style>
+    #content {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <button id="toggleButton">Toggle Content</button>
+  <div id="content">
+    This is the content to be toggled.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+// and then ts code is here
+const button = document.getElementById("toggleButton") as HTMLButtonElement;
+const content = document.getElementById("content") as HTMLDivElement;
+
+button.addEventListener("click", () => {
+  if (content.style.display === "none") {
+    content.style.display = "block";
+  } else {
+    content.style.display = "none";
+  }
+});
